@@ -95,3 +95,16 @@ def par_o_inpar(num):
 
 par_o_inpar(numero);
 
+
+numero_lista = [2, 5, 8, 10, 12, 15, 20, 25, 30, 50];
+
+for numero_lista in range(1, 11):
+  print(numero_lista ** 2);
+
+texto_input = input('Escriba su texto: ');
+
+def uppercase_text(text):
+  upper = text.upper();
+  return upper;
+
+print('Texto en mayusculas es: ', uppercase_text(texto_input));
