@@ -1,6 +1,6 @@
 # 📊📚 Ejercicios de Estadística y Estructura de Datos 🐍
 
-¡Bienvenidos/as a este repositorio! 🚀 Aquí encontrarás una colección de ejercicios realizados en las materias de **Estadística** y **Estructura de Datos**, utilizando el maravilloso mundo de **Python** 🐍.
+¡Bienvenidos/as a este repositorio! 🚀 Aquí encontrarás una colección de ejercicios realizados en las materias de **Estadística** y **Estructura de Datos**, utilizando **Python** 🐍.
 
 📌 **Materias**:
 - Estadística 📈
