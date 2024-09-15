@@ -70,11 +70,14 @@ Se utilian para organizar el codigo y facilitar
 """
 
 # PSEUDOCODIGO
+
+# 1
 nombre = input('Cual es tu nombre? ');
 edad3 = input('Que edad tienes? ');
 
 print(f"Hola {nombre}, tienes {edad3} años");
 
+# 2
 base = input('Ingrese el tamaño base de su triangulo: ');
 altura = input('Ingrese la altura de su triangulo: ');
 
@@ -84,6 +87,7 @@ def triangulo(base, altura):
 
 triangulo(base, altura);
 
+# 3
 numero = int(input('Ingrese un número entero: '))
 
 def par_o_inpar(num):
@@ -95,12 +99,13 @@ def par_o_inpar(num):
 
 par_o_inpar(numero);
 
-
+# 4
 numero_lista = [2, 5, 8, 10, 12, 15, 20, 25, 30, 50];
 
 for numero_lista in range(1, 11):
   print(numero_lista ** 2);
 
+# 5
 texto_input = input('Escriba su texto: ');
 
 def uppercase_text(text):
