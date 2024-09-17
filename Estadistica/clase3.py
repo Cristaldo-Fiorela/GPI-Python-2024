@@ -15,12 +15,12 @@ absoluta = df['Niveles de Afectación'].value_counts();
 # Frecuencia Relativa
 relativa = df['Niveles de Afectación'].value_counts(normalize=True);
 
-print('Frecuencia absoluta');
+print('===Frecuencia absoluta===');
 print(absoluta);
 
 print();
 
-print('Frecuencia relativa');
+print('===Frecuencia relativa===');
 print(relativa);
 
 
