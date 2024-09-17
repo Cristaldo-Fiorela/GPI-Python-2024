@@ -82,7 +82,7 @@ base = input('Ingrese el tamaño base de su triangulo: ');
 altura = input('Ingrese la altura de su triangulo: ');
 
 def triangulo(base, altura):
-  area = int(base) * int(altura);
+  area = int(base) * int(altura) / 2;
   print(f"El área del triángulo ingresado es: {area}")
 
 triangulo(base, altura);
