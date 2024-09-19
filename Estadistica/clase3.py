@@ -24,3 +24,15 @@ print('===Frecuencia relativa===');
 print(relativa);
 
 
+"""
+1. Rango Ls - Li
+Ls = 4
+Li = 0
+
+4 - 0 = 4
+
+
+
+
+
+"""
