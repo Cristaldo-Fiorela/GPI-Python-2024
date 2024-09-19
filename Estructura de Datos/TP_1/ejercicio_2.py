@@ -42,4 +42,25 @@ def promedio(notas):
 
 promedio_total = promedio(notas);
 
-print(f"El promedio es: {promedio_total}")
+print(f"El promedio es: {promedio_total}");
+
+def rendimiento(notas):
+  ultimo_idx = len(notas) - 1;
+  primera_nota = notas[0];
+  ultima_nota = notas[ultimo_idx];
+
+  if(primera_nota > ultima_nota):
+    print('Empeoró su desempeño');
+  elif(primera_nota == ultima_nota):
+    print('Mantuvo la nota');
+  else:
+    print('Mejoró su desempeño');
+
+rendimiento_total = rendimiento(notas);
+
+if(promedio_total >= 7):
+  print('Promocionó');
+elif(promedio_total >= 4):
+  print('Debe rendir final');
+else:
+  print('Debe recursar');
