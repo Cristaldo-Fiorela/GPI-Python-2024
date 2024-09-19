@@ -12,7 +12,7 @@ aula_par = 'A-300';
 aula_impar = 'A-315';
 
 # VALIDACIONES
-def valido(dia):
+def no_valido(dia):
   if(dia > 6 or dia < 1):
     print('Ingrese un valor valido del 1 al 6');
     return True
@@ -22,7 +22,7 @@ def valido(dia):
 while (True):
   dia = int(input('Ingrese su dia en un rango de 1 a 6: '));
 
-  if not valido(dia):
+  if not no_valido(dia):
     break;
 
 # A
