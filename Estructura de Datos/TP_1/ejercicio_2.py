@@ -8,8 +8,8 @@ notas = [];
 
 def valido(nota):
   if isinstance(nota, (int, float)):
-    if (nota < 0):
-      print('Ingrese un valor valido no negativo.');
+    if (nota < 0 or nota > 10):
+      print('Ingrese un valor valido.');
       return False;
     return True;
   elif isinstance(nota, str):
