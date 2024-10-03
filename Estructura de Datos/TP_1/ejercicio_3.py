@@ -32,17 +32,12 @@ def es_par(dia):
     Verifica si un día dado es par.
 
     Args:
-    dia (int): Un número entero que representa el día de la semana.
+      dia (int): Un número entero que representa el día de la semana.
 
     Returns:
-    bool: 
+      bool: 
         - True si el número del día es par.
         - False si el número del día es impar.
-
-    Descripción:
-    La función toma un número entero como entrada y determina si es par. 
-    Esto se realiza verificando si el residuo de la división del número por 2 es igual a 0. 
-    Si es así, el número es par y la función retorna True, de lo contrario retorna False.
   """
   if (dia % 2 == 0):
     return True;
