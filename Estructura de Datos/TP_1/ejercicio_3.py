@@ -6,14 +6,11 @@ c. Estacionamiento: También se requiere que el programa asigne un costo diario 
 """
 
 # Variables default
-dia = 1;
-par = False;
 aula_par = 'A-300';
 aula_impar = 'A-315';
 precio_materia = 1500;
 descuento_especial = 0.25;
 descuento_base = 0.05;
-turnos = ['Mañana', 'Tarde', 'Noche'];
 
 # VALIDACIONES
 def no_valido(dia):
@@ -31,6 +28,22 @@ while (True):
 
 # A -  Aulas
 def es_par(dia):
+  """
+    Verifica si un día dado es par.
+
+    Args:
+    dia (int): Un número entero que representa el día de la semana.
+
+    Returns:
+    bool: 
+        - True si el número del día es par.
+        - False si el número del día es impar.
+
+    Descripción:
+    La función toma un número entero como entrada y determina si es par. 
+    Esto se realiza verificando si el residuo de la división del número por 2 es igual a 0. 
+    Si es así, el número es par y la función retorna True, de lo contrario retorna False.
+  """
   if (dia % 2 == 0):
     return True;
   else:
@@ -51,19 +64,50 @@ aula = aula_disponible(dia);
 # B - Descuento
 print('=======DESCUENTO Y ESTACIONAMIENTO =======')
 
+# Preguntas al usuario sobre su turno elegido y materias a cursar.
 turno_elegido = input(f'Ingrese el turno: Mañana, Tarde o Noche: ').lower();
 materias = int(input('Ingrese la cantidad de materias que desea cursar: '));
 
 def total_inscripcion(num, precio):
+  """
+    Calcula el total de la inscripcion segun la cantidad de materias inscriptas.
+
+    Args:
+      num: (int) cantidad de materias a cursar.
+      precio (float): precio base de materias.
+
+    Returns:
+      float: El monto total de inscripción.
+  """
   total = float(precio * num);
   return total
 
 def descuento(total, descuento):
+  """
+    Calcula el total después de aplicar un descuento.
+
+    Args:
+        total: (float) El monto total antes del descuento.
+        descuento (float): El porcentaje de descuento a aplicar (por ejemplo, 0.10 para un 10% de descuento).
+
+    Returns:
+        float: El monto total después de aplicar el descuento.
+  """
   a_restar = float(total * descuento);
   total_descuento = total - a_restar;
   return total_descuento;
 
 def cuota(num, turno):
+  """
+    Evalua el valor de cuota con los descuentos aplicables en base a las materias elegidas y el turno cursado.
+
+    Args:
+      num: (int) cantidad de materias a cursar.
+      turno (str): turno a cursar. Puede ser: Mañana, Tarde o Noche.
+
+    Returns:
+      str: El monto de cuota a pagar con descuentos aplicados.
+  """
   total = total_inscripcion(materias, precio_materia);
 
   if(num > 3 and turno == 'tarde'):
