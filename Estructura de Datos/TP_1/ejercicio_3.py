@@ -10,6 +10,10 @@ dia = 1;
 par = False;
 aula_par = 'A-300';
 aula_impar = 'A-315';
+precio_materia = 1500;
+descuento_especial = 0.25;
+descuento_base = 0.05;
+turnos = ['Mañana', 'Tarde', 'Noche'];
 
 # VALIDACIONES
 def no_valido(dia):
@@ -25,7 +29,7 @@ while (True):
   if not no_valido(dia):
     break;
 
-# A
+# A -  Aulas
 def es_par(dia):
   if (dia % 2 == 0):
     return True;
@@ -41,4 +45,32 @@ def aula_disponible(dia):
   else:
     print(f'Los alumnos cursan en el aula {aula_impar}');
 
+print('==================AULAS===================')
 aula = aula_disponible(dia);
+
+# B - Descuento
+print('=======DESCUENTO Y ESTACIONAMIENTO =======')
+
+turno_elegido = input(f'Ingrese el turno: Mañana, Tarde o Noche: ').lower();
+materias = int(input('Ingrese la cantidad de materias que desea cursar: '));
+
+def total_inscripcion(num, precio):
+  total = float(precio * num);
+  return total
+
+def descuento(total, descuento):
+  a_restar = float(total * descuento);
+  total_descuento = total - a_restar;
+  return total_descuento;
+
+def cuota(num, turno):
+  total = total_inscripcion(materias, precio_materia);
+
+  if(num > 3 and turno == 'tarde'):
+    print('Usted ha sido electo con un descuento especial: ');
+    print(f'Cuota normal: ${total}');
+    print(f'Con descuento: ${descuento(total, descuento_especial)}');
+  else:
+    print(f'El valor de la cuota es: ${descuento(total, descuento_base)}')
+
+valor_cuota = cuota(materias, turno_elegido);
