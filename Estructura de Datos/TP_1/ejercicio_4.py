@@ -24,6 +24,8 @@ aula_impar = 'A-315';
 contador = 0;
 notas = [];
 cantidad = 0;
+cuota_comedor = 1250;
+cuota_total = 0;
 
 # UTILS
 def es_par(num):
@@ -107,6 +109,7 @@ print(f'La edad ingresada es: {edad}');
 print(f'Se ha ingresado la edad erroneamente {contador} veces');
 
 # C - Promedio de Notas
+print('=======Promedio de notas=======');
 
 while(True):
   a_cargar = int(input('Cuantas notas desea cargar? '))
@@ -126,3 +129,15 @@ for i in range(a_cargar):
 
 promedio_total = promedio(notas);
 print(f'El promedio de notas es: {promedio_total}');
+
+# D - Costo del comedor
+print('=======Costo del comedor=======');
+print(f"{'Día':<5} {'Aula':<5}")
+
+for idx, dia in enumerate(dias):
+  if (idx == 0):
+    print(f"{dia:<5} $ {cuota_comedor:<5}");
+    cuota_total += cuota_comedor;
+  else:
+    cuota_total += cuota_comedor;
+    print(f"{dia:<5} $ {cuota_total:<5}");
