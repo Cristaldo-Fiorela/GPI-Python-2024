@@ -29,25 +29,24 @@ while (True):
   if not no_valido(dia):
     break;
 
-# A -  Aulas
-def es_par(dia):
+def es_par(num):
   """
     Verifica si un día dado es par.
 
     Args:
-      dia (int): Un número entero que representa el día de la semana.
+      num (int): Un número entero que representa el día de la semana.
 
     Returns:
       bool: 
         - True si el número del día es par.
         - False si el número del día es impar.
   """
-  if (dia % 2 == 0):
+  if (num % 2 == 0):
     return True;
   else:
     return False;
 
-
+# A -  Aulas
 def aula_disponible(dia):
   resultado = es_par(dia);
 
