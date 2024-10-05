@@ -22,6 +22,8 @@ dias = [1, 2, 3, 4, 5, 6]
 aula_par = 'A-300';
 aula_impar = 'A-315';
 contador = 0;
+notas = [];
+cantidad = 0;
 
 # UTILS
 def es_par(num):
@@ -42,10 +44,40 @@ def es_par(num):
     return False;
 
 def mayor_de_edad(num):
+  """
+    Verifica si el numero ingresado es mayor o igual a 18.
+
+    Args:
+      num (int): Un número entero que representa la edad de la persona.
+
+    Returns:
+      bool: 
+        - True si es igual o mayor a 18.
+        - False si es menor a 18.
+  """
   if (num >= 18):
     return True;
   else:
     return False;
+
+def promedio(num_list):
+  """
+    Saca el promedio total de una lista de numeros.
+
+    Args:
+      num_list (list): Lista de numeros.
+
+    Returns:
+      promedio (float)
+  """ 
+  total = 0;
+  cantidad = len(num_list);
+
+  for num in num_list:
+    total += num;
+
+  promedio = total / cantidad;
+  return promedio;
 
 # A - Listado de aulas
 
@@ -73,3 +105,24 @@ while(True):
 
 print(f'La edad ingresada es: {edad}');
 print(f'Se ha ingresado la edad erroneamente {contador} veces');
+
+# C - Promedio de Notas
+
+while(True):
+  a_cargar = int(input('Cuantas notas desea cargar? '))
+
+  if not (a_cargar <= 0):
+    break
+
+for i in range(a_cargar):
+  while (True):
+    nota = float(input('Ingrese la nota: '));
+
+    if(nota <= 0 or nota > 10):
+      print("Nota inválida. Por favor, ingrese una nota en el rango de 1 a 10.")
+    else:
+      notas.append(nota);
+      break
+
+promedio_total = promedio(notas);
+print(f'El promedio de notas es: {promedio_total}');
