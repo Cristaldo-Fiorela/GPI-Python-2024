@@ -11,6 +11,9 @@ aula_impar = 'A-315';
 precio_materia = 1500;
 descuento_especial = 0.25;
 descuento_base = 0.05;
+estacionamiento_base = 300;
+estacionamiento_bici = 50;
+vehiculos_validos = ['auto', 'moto', 'bicicleta'];
 
 # VALIDACIONES
 def no_valido(dia):
@@ -113,3 +116,23 @@ def cuota(num, turno):
     print(f'El valor de la cuota es: ${descuento(total, descuento_base)}')
 
 valor_cuota = cuota(materias, turno_elegido);
+
+# C - Estacionamiento
+
+def estacionamiento(vehiculo):
+  if vehiculo not in vehiculos_validos:
+    print('Ingrese un valor valido');
+    return True;
+  elif (vehiculo == 'bicicleta' ):
+    print(f'El costo de estacionamiento para {vehiculo} es: ${estacionamiento_bici}');
+    return False
+  else:
+    print(f'El costo de estacionamiento para {vehiculo} es: ${estacionamiento_base}');
+    return False
+
+
+while(True):
+  vehiculo = input('Ingrese el vehiculo que utiliza: Auto, Moto o Bicicleta: ').lower();
+
+  if not estacionamiento(vehiculo):
+    break;
