@@ -21,6 +21,7 @@ La universidad está mejorando sus sistemas y ha solicitado lo siguiente:
 dias = [1, 2, 3, 4, 5, 6]
 aula_par = 'A-300';
 aula_impar = 'A-315';
+contador = 0;
 
 # UTILS
 def es_par(num):
@@ -40,6 +41,12 @@ def es_par(num):
   else:
     return False;
 
+def mayor_de_edad(num):
+  if (num >= 18):
+    return True;
+  else:
+    return False;
+
 # A - Listado de aulas
 
 print('======Listado de aulas=======');
@@ -51,3 +58,18 @@ for dia in dias:
   else:
     print(f"{dia:<5} {aula_impar:<5}");
 
+# B - Carga de edades
+print('=======Carga de edades=======');
+
+while(True):
+  edad = int(input('Ingrese una edad mayor o igual a 18: '));
+  
+  if not (mayor_de_edad(edad)):
+    print('error! ', end='')
+    contador += 1;
+  
+  if (mayor_de_edad(edad)):
+    break
+
+print(f'La edad ingresada es: {edad}');
+print(f'Se ha ingresado la edad erroneamente {contador} veces');
